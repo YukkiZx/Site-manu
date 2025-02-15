@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechExpress</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4f/Icon_Large_Green.png" type="image/x-icon">
+
+    <style>
+        /* Configurações gerais */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e1e1e;
+            background-image: url('https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_1280.jpg'); /* Novo fundo tecnológico */
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 300px;
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animação de fade-in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        h1:hover {
+            color: #61dafb;
+        }
+
+        .description {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: white;
+        }
+
+        /* Ícones e interatividade */
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .icon-container {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon-container a {
+            font-size: 2.5em;
+            color: #61dafb;
+            text-decoration: none;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .icon-container a:hover {
+            color: #21a1f1;
+            transform: scale(1.2) rotate(15deg);
+        }
+
+        .icon-container p {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: white;
+        }
+
+        /* Efeito de hover na descrição */
+        .description:hover {
+            color: #61dafb;
+            transition: color 0.3s ease;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .icons {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .icon-container {
+                font-size: 2em;
+            }
+
+            .container {
+                width: 250px;
+                padding: 20px;
+            }
+        }
+
+        /* Indicador de carregamento */
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Indicador de carregamento -->
+    <div id="loader">Carregando...</div>
+
+    <div class="container">
+        <h1>TechExpress</h1>
+        <p class="description">Clique nos ícones abaixo para entrar em contato diretamente comigo:</p>
+
+        <div class="icons">
+            <div class="icon-container">
+                <a href="https://wa.me/84991813568" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+                </a>
+                <p>WhatsApp</p>
+            </div>
+
+            <div class="icon-container">
+                <a href="https://www.instagram.com/tech.express159" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png" alt="Instagram" width="50" height="50">
+                </a>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mostrar o carregamento até a página ser totalmente carregada
+        window.onload = function() {
+            document.getElementById("loader").style.display = "none";
+        }
+    </script>
+</body>
+</html>
